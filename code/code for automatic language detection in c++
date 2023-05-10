@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+#include <langid/langid.h>
+
+int main() {
+    // Initialize the language identifier
+    langid::Langid identifier;
+
+    // Input text for language detection
+    std::string inputText = "This is a sample text for language detection.";
+
+    // Detect the language
+    std::string detectedLanguage = identifier.classify(inputText);
+
+    // Output the detected language
+    std::cout << "Detected language: " << detectedLanguage << std::endl;
+
+    return 0;
+}
